@@ -191,7 +191,7 @@ func (c *VaapiCodec) GlobalFlags() string {
 
 // PixelFormat is the pixel format required for this codec.
 func (c *VaapiCodec) PixelFormat() string {
-	return "vuyx -rc_mode CQP"
+	return "vaapi -rc_mode CQP -F "format=vuyx,hwupload""
 }
 
 // Scaler is the scaler used for resizing the video in the transcoder.
