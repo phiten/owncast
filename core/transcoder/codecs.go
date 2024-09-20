@@ -152,7 +152,7 @@ func (c *OmxCodec) GetPresetForLevel(l int) string {
 		1: "superfast",
 		2: "veryfast",
 		3: "faster",
-		4: "fast",
+		4: "medium",
 	}
 
 	preset, ok := presetMapping[l]
@@ -191,7 +191,7 @@ func (c *VaapiCodec) GlobalFlags() string {
 
 // PixelFormat is the pixel format required for this codec.
 func (c *VaapiCodec) PixelFormat() string {
-	return "vaapi -rc_mode CQP -F 'format=vuyx,hwupload'"
+	return "vaapi -rc_mode CQP -qp 18"
 }
 
 // Scaler is the scaler used for resizing the video in the transcoder.
