@@ -221,7 +221,7 @@ func (c *VaapiCodec) GetPresetForLevel(l int) string {
 		1: "superfast",
 		2: "veryfast",
 		3: "faster",
-		4: "medium",
+		4: "fast",
 	}
 
 	preset, ok := presetMapping[l]
